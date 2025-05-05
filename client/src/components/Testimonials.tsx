@@ -5,28 +5,28 @@ import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "David Miller",
+      name: "Swapnil Ranmale",
       position: "CTO at TechCorp",
       company: "TechCorp Inc.",
       content: "Renunciant Technologies delivered an exceptional software solution that perfectly matched our requirements. Their team was professional, responsive, and delivered on time and on budget.",
       rating: 5
     },
     {
-      name: "Jennifer Lee",
+      name: "Rahul Raundal",
       position: "Operations Director",
       company: "Global Innovations",
       content: "Working with Renunciant has transformed our business operations. Their cloud migration services were flawless, and we've seen a significant improvement in efficiency and cost savings.",
       rating: 5
     },
     {
-      name: "Robert Thompson",
+      name: "Pratik Raktate",
       position: "IT Manager",
       company: "Healthcare Solutions",
       content: "The mobile application developed by Renunciant Technologies has received fantastic feedback from our users. The team's attention to detail and user-centric approach made all the difference.",
       rating: 4
     },
     {
-      name: "Emily Carter",
+      name: "Rohit Ranmale",
       position: "CEO",
       company: "Digital Marketers Ltd",
       content: "We've worked with many IT consultants in the past, but none have matched the expertise and dedication of the Renunciant team. They're true partners in our success.",
