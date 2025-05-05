@@ -1,7 +1,8 @@
 import express from 'express';
 import {
     signup,
-    verifyEmail
+    verifyEmail,
+    logout
 } from "../controllers/auth.controller.js"
 
 const router = express.Router();
@@ -9,5 +10,7 @@ const router = express.Router();
 router.post("/signup", signup);
 
 router.post("/verify-email", verifyEmail);
+
+router.post("/logout", logout);
 
 export default router;
