@@ -106,7 +106,47 @@ export const verifyEmail = async (req, res) => {
   };
 
 export const login = async (req, res) => {
-    res.send("login route")
+    try {
+        const { email, password } = req.body;
+
+        const user = await User.findOne({ email });
+        if (!user) {
+            return res.status(400).json({
+                success: false,
+                message: "Invalid credentials"
+            })
+        }
+
+        const isPasswordValid = await bcrypt.compare(password, user.password);
+        if (!isPasswordValid) {
+            return res.status(403).json({
+                success: false,
+                message: "Invalid password"
+            })
+        }
+
+        generateJwtAndSetCookie(res, user._id);
+
+        user.lastLogin = Date.now();
+        await user.save();
+
+        const safeUser = user.toObject();
+        delete safeUser.password;
+
+        res.status(200).json({
+            success: true,
+            message: "logged in successfully",
+            user: safeUser
+        });
+
+
+    } catch (error) {
+        console.log("error in login", error)
+        res.status(400).json({
+            success: false,
+            message: error.message,
+        });
+    }
 }
 
 export const logout = async (req, res) => {
