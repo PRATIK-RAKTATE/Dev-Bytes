@@ -41,7 +41,7 @@ const Footer = () => {
                 { name: "Home", url: "#home" },
                 { name: "About Us", url: "#about" },
                 { name: "Services", url: "#services" },
-                { name: "Products", url: "#products" },
+                { name: "Courses", url: "#courses" },
                 { name: "Contact", url: "#contact" }
               ].map((link) => (
                 <li key={link.name}>
@@ -83,11 +83,11 @@ const Footer = () => {
               <input 
                 type="email" 
                 placeholder="Your email" 
-                className="bg-white/10 text-white px-4 py-2 rounded-l-md focus:outline-none flex-grow"
+                className="bg-white/10 text-white px-2 py-2 rounded-l-md focus:outline-none flex-grow"
               />
               <button 
                 type="submit" 
-                className="bg-tech-purple hover:bg-tech-purple/80 px-4 py-2 rounded-r-md transition-colors duration-300"
+                className="bg-tech-purple hover:bg-tech-purple/80 px-2 py-2 rounded-r-md transition-colors duration-300"
               >
                 Subscribe
               </button>

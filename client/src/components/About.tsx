@@ -1,4 +1,3 @@
-
 import { CheckCircle } from 'lucide-react';
 
 const About = () => {
@@ -19,8 +18,12 @@ const About = () => {
           <div className="w-full lg:w-1/2">
             <div className="relative">
               <div className="rounded-xl overflow-hidden shadow-xl">
-                <div className="aspect-[4/3] bg-gradient-to-br from-tech-blue to-tech-dark-gray rounded-lg overflow-hidden flex items-center justify-center">
-                  <div className="text-white text-lg font-semibold">About Image</div>
+                <div className="aspect-[4/3] bg-gradient-to-br from-tech-blue to-tech-dark-gray rounded-lg overflow-hidden">
+                  <img 
+                    src="/images/aboutuspic.png" 
+                    alt="About Us" 
+                    className="w-full h-full object-cover rounded-lg"
+                  />
                 </div>
               </div>
               <div className="absolute -z-10 -bottom-6 -right-6 w-3/4 h-3/4 bg-tech-purple opacity-10 rounded-xl"></div>

@@ -1,4 +1,3 @@
-
 import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 
@@ -29,23 +28,17 @@ const Hero = () => {
                 Learn More
               </Button>
             </div>
-
-            {/* Clients */}
-            <div className="mt-12">
-              <p className="text-sm text-gray-500 mb-4">TRUSTED BY INDUSTRY LEADERS</p>
-              <div className="flex flex-wrap gap-8 items-center opacity-70">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="h-8 bg-gray-300 rounded w-24"></div>
-                ))}
-              </div>
-            </div>
           </div>
 
           {/* Hero Image */}
           <div className="w-full md:w-1/2">
             <div className="relative bg-gradient-to-br from-tech-purple/20 to-tech-indigo/20 rounded-2xl p-4 shadow-xl">
-              <div className="aspect-[4/3] bg-gradient-to-r from-tech-purple to-tech-indigo rounded-lg overflow-hidden flex items-center justify-center">
-                <div className="text-white text-lg font-semibold">Hero Image</div>
+              <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                <img 
+                  src="images/front1.png" 
+                  alt="Tech Solutions" 
+                  className="w-full h-full object-cover rounded-lg"
+                />
               </div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-br from-tech-purple to-tech-indigo rounded-full opacity-60 blur-lg"></div>
             </div>
@@ -55,9 +48,9 @@ const Hero = () => {
         {/* Stats */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
           {[
-            { value: "10+", label: "Years Experience" },
-            { value: "250+", label: "Projects Completed" },
-            { value: "50+", label: "Tech Experts" },
+            { value: "1+", label: "Years Experience" },
+            { value: "3+", label: "Projects Completed" },
+            { value: "10+", label: "Tech Experts" },
             { value: "100%", label: "Client Satisfaction" }
           ].map((stat, index) => (
             <div key={index} className="bg-white rounded-lg p-4 shadow-lg text-center">
