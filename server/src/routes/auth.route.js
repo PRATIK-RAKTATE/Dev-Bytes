@@ -1,9 +1,13 @@
 import express from 'express';
 import {
-    signup
+    signup,
+    verifyEmail
 } from "../controllers/auth.controller.js"
 
-const authRoutes = express.Router();
-authRoutes.post("/signup", signup);
+const router = express.Router();
 
-export default authRoutes;
+router.post("/signup", signup);
+
+router.post("/verify-email", verifyEmail);
+
+export default router;
